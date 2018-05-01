@@ -17,6 +17,12 @@ Another useful one is VLOOKUP. Suppose that you have a column of people with the
 
 Here, `M6` is the username to look up, the table to look in is in columns I and J, from 2-84, with usernames in I, and colors in J. `2` indicates to look in the second column of the 2 for what to return, and `FALSE` said that `I` is not sorted.
 
+### SUBSTITUTE
+
+Substitute is probably the command you want, not replace.
+
+`=SUBSTITUTE(A1, " ", "_")`
+
 ## Regex basics
 
 You should really just play around with regex, but in sublime text, some useful ones are capture groups (parentheses are roughly capture groups, but you should Google around for tutorials if you're not familiar). For example, if you have
