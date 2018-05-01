@@ -5,7 +5,17 @@ Mostly for the matrix slideshow
 
 I used Google Sheets for creation of most commands. You can create columns for each of the various arguments or pieces you'll need, and then stitch them together with `CONCATENATE`.
 
+### CONCATENATE
+
 For example, I could `ls -al` a folder of images of random sizes to get their names, use regex find/replace in sublime text to extract just the filenames, and paste that into column A of a google sheet. I'd extract just the usernames (again, regex replace in sublime text), and put those in column B. Then, on another column, I would have something like `=CONCATENATE("convert ", A1, " -resize 582x582 display/",B1,".png")`, and drag that down to convert everything to display size.
+
+### VLOOKUP
+
+Another useful one is VLOOKUP. Suppose that you have a column of people with their assigned color, and another column elsewhere of people, but with random people missing that skipped class that day. How do you look up what color they had? VLOOKUP.
+
+`=VLOOKUP(M6,$I$2:$J$84,2, FALSE)`
+
+Here, `M6` is the username to look up, the table to look in is in columns I and J, from 2-84, with usernames in I, and colors in J. `2` indicates to look in the second column of the 2 for what to return, and `FALSE` said that `I` is not sorted.
 
 ## Regex basics
 
